@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-75 uppercase
+    }
+
+    .btn.small {
+        @apply text-sm py-1.5 px-3 rounded-md;
+    }
+
+    .btn-blue {
+        @apply btn bg-blue-500 text-white hover:bg-blue-700 focus:ring-blue-400;
+    }
+
+    .btn-red {
+        @apply btn bg-red-500 text-white hover:bg-red-700 focus:ring-red-400;
+    }
+
+    .label {
+        @apply text-xs font-bold uppercase;
+    }
+
+    .active-field {
+        @apply my-3;
+    }
+
+    .input {
+        @apply w-full bg-gray-50 border rounded py-3 px-4 mb-2
+    }
+
+    .error-msg {
+        @apply text-xs;
+    }
+
+    .has-errors .label, .has-errors input, .has-errors .error-msg {
+        @apply text-red-400 border-red-400;
+    }
+
+    .active-field:not(.has-errors) .error-msg {
+        @apply hidden;
+    }
+
+    .card {
+        @apply w-full bg-white rounded-md overflow-hidden p-6
+    }
+
+    .alert {
+        @apply card flex justify-center items-center my-6
+    }
+
+    .alert.danger {
+        @apply bg-red-100 text-red-700 border border-red-400;
+    }
+
+    .alert.success {
+        @apply bg-green-100 text-green-700 border border-green-400;
+    }
+}
