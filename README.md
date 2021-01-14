@@ -44,11 +44,8 @@ _Laravel Sail - это легкий интерфейс командной стр
 
 `sail php artisan migrate`
 
-Готово!
 
-Можно открывать в браузере [http://localhost/](http://localhost/)
-
-### Настройка изображений
+#### Настройка изображений
 
 Изображения сохраняются в директорию `storage/app/public/images`.
 
@@ -58,3 +55,7 @@ _Laravel Sail - это легкий интерфейс командной стр
 Для этого выполните команду
 
 `sail php artisan storage:link`
+
+Готово!
+
+Можно открывать в браузере [http://localhost/](http://localhost/)
