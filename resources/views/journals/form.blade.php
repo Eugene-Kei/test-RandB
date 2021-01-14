@@ -60,6 +60,9 @@
                         name="authors[]"
                         class="input"
                         multiple
+                        @if($authors->isEmpty())
+                        disabled
+                        @endif
                     >
                         @forelse($authors as $author)
                             <option
@@ -81,7 +84,8 @@
                 </div>
                 @if($journal->image_url)
                     <div class="w-36 h-36 pt-3 flex justify-center">
-                        <img class="object-fill max-h-full max-w-full m-auto" src="{{$journal->image_url}}" alt="{{$journal->name}}">
+                        <img class="object-fill max-h-full max-w-full m-auto" src="{{$journal->image_url}}"
+                             alt="{{$journal->name}}">
                     </div>
                 @endif
                 <div class="active-field @error('image') has-errors @enderror">
