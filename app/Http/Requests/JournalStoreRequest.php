@@ -19,7 +19,7 @@ class JournalStoreRequest extends FormRequest
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'published_at' => 'required|date_format:Y-m-d',
             'authors' => 'required|array',
-            'authors.*' => 'integer',
+            'authors.*' => 'integer|exists:authors,id',
         ];
     }
 }

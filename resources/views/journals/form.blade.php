@@ -51,7 +51,7 @@
                     >
                     <p class="error-msg">{{$errors->first('published_at')}}</p>
                 </div>
-                <div class="active-field @error('authors') has-errors @enderror">
+                <div class="active-field @if($errors->has('authors') || $errors->has('authors.*')) has-errors @endif">
                     <label class="label" for="input-authors">
                         Авторы*
                     </label>
@@ -79,8 +79,9 @@
                             <option value="">Необходимо добавить авторов</option>
                         @endforelse
                     </select>
-                    <p class="error-msg">{{$errors->first('authors')}}</p>
                     <p class="text-black text-opacity-50 text-xs">Для выбора нескольких авторов, удерживайте Ctrl</p>
+                    <p class="error-msg">{{$errors->first('authors')}}</p>
+                    <p class="error-msg">{{$errors->first('authors.*')}}</p>
                 </div>
                 @if($journal->image_url)
                     <div class="w-36 h-36 pt-3 flex justify-center">
